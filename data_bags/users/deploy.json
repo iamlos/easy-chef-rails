@@ -1,0 +1,10 @@
+{
+  "id": "deploy",
+  "ssh_keys": [
+    // add your ssh public key and delete this line
+    "ssh-rsa AAAAB3NzaC1y..."
+  ],
+  "groups": ["sysadmin"],
+  "shell": "\/bin\/bash",
+  "action": "create"
+}
