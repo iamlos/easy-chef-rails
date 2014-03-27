@@ -1,9 +1,15 @@
-# Easy Rails Provisioning with Chef
+# Easy Rails server setup with Chef
 
 Easily install Rails server environments with Chef.
 
+The Rails environment consists of the following:
+- nginx
+- postgresql
+- rbenv + ruby `2.0.0-p353` (changed easily)
+- packages often used with popular ruby gems (i.e. libxml2 for nokogiri)
+
 Benefits:
-- really easy to use. It should be easier than Heroku.
+- really easy to use, even for total noobs. It should be easier than Heroku.
 - no ssh-ing to the server required
 - perfect for new Rails apps.
 - based on [Chef](http://www.getchef.com/chef/), the same tool Facebook uses.
@@ -26,7 +32,7 @@ Now, when the time for growth and expansion comes, you know you're ready.
 
 Clone this repository:
 
-    $ git clone bruno-/easy-chef-rails your_dir
+    $ git clone git@github.com:bruno-/easy-chef-rails.git
     $ cd your_dir
 
 Install required ruby gems and Chef cookbooks (cookbooks are Chef libraries):
@@ -46,13 +52,22 @@ necessary so you can ssh to your new server later.
     ],
     ...
 
+Choose your ruby version by editing second line in `roles/rails.rb`:
+
+    require 'securerandom'
+    ruby_version = "2.0.0-p353" # change ruby version here
+
 **Provisioning part**
 
 Buy a server or a VPS, and get its IP address.<br/>
 Don't have one? Try [digitalocean](https://www.digitalocean.com/). It's fast
 and affordable. (I don't work for digitalocean, I just think they're great)
 
-Install everything to your new server with a single command:
+Make sure you can ssh to the new server:
+
+    $ ssh root@<server_ip>
+
+Install everything to the server with a single command:
 
     $ bundle exec knife solo bootstrap root@<server_ip> -r "role[rails]"
 
@@ -63,8 +78,8 @@ can ssh to the server with:
 
 ### Next steps
 
-- now that the server is ready to go, you'll probably want to deploy your app
-with [capistrano](http://capistranorb.com/)
+- now that the server is ready to go, you'll probably want to deploy your rails
+app with [capistrano](http://capistranorb.com/)
 
 Optionally:
 
@@ -86,10 +101,12 @@ required to move the app to some other provider.
 - Heroku paid plans are expensive. You'll start wasting time optimizing
 your code and infrastructure to always stay free. Example: using in-thread
 background jobs, instead of paying Heroku for additional workers.
+- logs are just bad
 
 Depending on a single provider is not good. And you should never waste
-time to even further couple your apps to that provider. There should be a
-better way.
+time to even further couple your apps to that provider.
+
+There should be a better way and hopefully this projects shows it to you.
 
 ### Alternatives to this project
 
@@ -102,6 +119,10 @@ server with Chef. Also contains instructions for Capistrano 2.
 
 - [opscode/rails-quick-start](https://github.com/opscode/rails-quick-start) - not
 really a beginners guide how to setup multiple-servers Rails infrastructure.
+
+### Bugs and issues
+
+If you get stuck or have a problem, please report it via [issue](issues).
 
 ### License
 

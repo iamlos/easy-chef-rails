@@ -1,9 +1,8 @@
 require 'securerandom'
+ruby_version = "2.0.0-p353" # change ruby version here
 
 name "rails"
 description "Provisions server for rails app installation"
-
-ruby_version = "2.0.0-p353" # change ruby version here
 
 run_list(
   # base packages
