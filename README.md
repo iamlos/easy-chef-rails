@@ -43,7 +43,8 @@ Install required ruby gems and Chef cookbooks (cookbooks are Chef libraries):
 **Setup**
 
 Add your ssh *public* key to `data_bags/users/deploy.json` file. This is
-necessary so you can ssh to your new server later.
+necessary so you can ssh to your new server later.<br/>
+(you can get your ssh public key by running `$ cat ~/.ssh/id_rsa.pub`)
 
     "id": "deploy",
     "ssh_keys": [
