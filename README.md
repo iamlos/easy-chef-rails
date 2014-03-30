@@ -11,7 +11,7 @@ The Rails environment consists of the following:
 Benefits:
 - really easy to use, even for total noobs. It should be easier than Heroku.
 - no ssh-ing to the server required
-- perfect for new Rails apps.
+- perfect for new Rails apps
 - based on [Chef](http://www.getchef.com/chef/), the same tool Facebook uses.
 It sets you up for unlimited scale.
 - no security compromises
@@ -79,7 +79,9 @@ can ssh to the server with:
 ### Next steps
 
 - now that the server is ready to go, you'll probably want to deploy your rails
-app with [capistrano](http://capistranorb.com/)
+app with capistrano. You can find easy, 5 minute
+[instructions here](https://gist.github.com/bruno-/9808201) (this tutorial is
+written to complement this project).
 
 Optionally:
 
@@ -108,7 +110,7 @@ time to even further couple your apps to that provider.
 
 There should be a better way and hopefully this projects shows it to you.
 
-### Alternatives to this project
+### Alternatives
 
 - [chef-rails-suite](https://github.com/arrowcircle/chef-rails-suite) - haven't
 tried it out, but seems do the same job. It even goes one step further and
