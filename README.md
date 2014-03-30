@@ -33,10 +33,11 @@ Now, when the time for growth and expansion comes, you know you're ready.
 Clone this repository:
 
     $ git clone https://github.com/bruno-/easy-chef-rails.git
-    $ cd your_dir
+    $ cd easy-chef-rails
 
 Install required ruby gems and Chef cookbooks (cookbooks are Chef libraries):
 
+    # within a cloned easy-chef-rails repo
     $ bundle install
     $ bundle exec berks install   # berkshelf installs chef cookbooks
 
