@@ -32,7 +32,7 @@ Now, when the time for growth and expansion comes, you know you're ready.
 
 Clone this repository:
 
-    $ git clone git@github.com:bruno-/easy-chef-rails.git
+    $ git clone https://github.com/bruno-/easy-chef-rails.git
     $ cd your_dir
 
 Install required ruby gems and Chef cookbooks (cookbooks are Chef libraries):
