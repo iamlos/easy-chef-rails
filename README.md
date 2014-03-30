@@ -69,7 +69,11 @@ Make sure you can ssh to the new server:
 
     $ ssh root@<server_ip>
 
-Install everything to the server with a single command:
+If you can successfully ssh to to the server, that's a good sign. Log out from
+the server.
+
+Locally, from the directory where you cloned `easy-chef-rails`, run the
+following command to install everything to the server:
 
     $ bundle exec knife solo bootstrap root@<server_ip> -r "role[rails]"
 
