@@ -77,8 +77,8 @@ following command to install everything to the server:
 
     $ bundle exec knife solo bootstrap root@<server_ip> -r "role[rails]"
 
-Sit back, relax and watch your new server being set up! After it's done, you
-can ssh to the server with:
+Sit back, relax and watch your new server being set up! It will take 15-20
+mins. After it's done, you can ssh to the server with:
 
     $ ssh deploy@<server_id>
 
