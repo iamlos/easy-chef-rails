@@ -62,7 +62,7 @@ Choose your ruby version by editing second line in `roles/rails.rb`:
 **Provisioning part**
 
 Buy a server or a VPS, and get its IP address.<br/>
-Don't have one? Try [digitalocean](https://www.digitalocean.com/). It's fast
+Don't have one? Try [digitalocean](https://www.digitalocean.com/?refcode=ed6b9ecbd8ec) (referral link). It's fast
 and affordable. (I don't work for digitalocean, I just think they're great)
 
 Make sure you can ssh to the new server:
